@@ -1,7 +1,4 @@
-import logging
-from aiogram import Bot, Dispatcher, types
-from aiogram.fsm.storage.memory import MemoryStorage
-from aiogram.dispatcher.filters.builtin import CommandStart
+from configs import *
 
 logging.basicConfig(level=logging.INFO)
 
