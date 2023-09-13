@@ -9,7 +9,7 @@ dp = Dispatcher(storage=storage)
 
 @dp.message()
 async def echo(message: types.Message):
-    await message.answer(message.text)
+    await message.answer(message.text1)
 
 
 if __name__ == '__main__':
