@@ -7,7 +7,6 @@ OctoInstructorBot
 
     - Python 3.10
     - Aiogram 3.0
-    - Pydantic 1.8.2
 
 API
 
