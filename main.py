@@ -1,8 +1,9 @@
 from configs import *
 
+BOT_TOKEN = os.environ['BOT_TOKEN']
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token="TOKEN")
+bot = Bot(token=BOT_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 
@@ -34,7 +35,7 @@ async def auth_callback(query: types.WebAppQuery, state: FSMContext):
     # авторизация прошла успешно
     await state.finish()
   else:
-    # ошибка авторизации
+    pass
 
 
 def main():
