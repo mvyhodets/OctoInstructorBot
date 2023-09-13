@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head><title>Авторизация</title></head>
-<body>
-<form> <label> Телефон: <input type="tel" id="phone"> </label> <label> Пароль: <input type="password" id="password"> </label>
+<!DOCTYPE html> <html> <head> <link rel="stylesheet" href="auth.css"> </head> <body> <h3>Вход для инструкторов</h3> <form action="/auth" method="POST">
+ini
+
+<img src="person-icon.svg">
+
+<input
+  type="text"
+  name="email"
+  placeholder="Email">
+
+<img src="lock-icon.svg">
+
+<input
+  type="password"
+  name="password"
+  placeholder="Password">
 
 <button type="submit">Войти</button>
-</form>
-<script type="module">
-     import { authenticate } from './js/auth.js'; // Получить токен из URL const token = new URL(location.href).searchParams.get('token'); authenticate(token) .then(() => { console.log('User authorized!'); location.href = '/'; }) .catch(() => { console.error('Authorization failed'); });
-</script>
-</body>
-</html>
+
+<a href="/forgot-password">Забыли пароль?</a>
+
+</form> <script src="auth.js"></script> </body> </html>
